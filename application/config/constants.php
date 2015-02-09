@@ -1,11 +1,5 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-//	Directories for images, css and javascript files
-define('URL','http://localhost/Peterbook/');
-define('IMG',URL.'assets/img/');
-define('CSS',URL.'assets/css/');
-define('JS',URL.'assets/js/');
-
 /*
 |--------------------------------------------------------------------------
 | File and Directory Modes

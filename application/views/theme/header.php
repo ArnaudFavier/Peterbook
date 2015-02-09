@@ -3,6 +3,6 @@
 <head>
 	<meta charset="utf-8">
 	<title>Peterbook</title>
-	<link rel="stylesheet" href="<?php echo(CSS.'styles.css'); ?>">
+	<link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
