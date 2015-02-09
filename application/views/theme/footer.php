@@ -1,5 +1,5 @@
-
-<hr>
+<footer>
+</hr>
 <p>Peterbook website</p>
-</body>
+</footer>
 </html>

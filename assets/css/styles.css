@@ -1,3 +1,35 @@
-body {
+div.titlebar
+{
+	background-color: #3A5795;
+	height:	82px;
+	margin: -8px;
+	  
+    border-width: 1px;
+    border-bottom-width:1px;
+    border-bottom-color:#253961;
+    border-bottom-style: solid;
+}
+
+div.after {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAECAYAAABP2FU6AAAAFElEQVQIHWOQM8q8zcDKKSzHAAcAHWQB1AViXrsAAAAASUVORK5CYII=");
+    background-repeat: repeat-x;
+    background-size: auto auto;
+    background-position: 0px 0px;
+    bottom: 0px;
+    content: "";
+    height: 9px;
+    left: 0px;
+    right: 0px;
+	margin-top: 7px; margin-left: -8px; margin-right: -8px;
+}
+
+
+body.gradient
+{
+    background: linear-gradient(#FFF, #D3D8E8) repeat scroll 0% 0% transparent;
+}
+
+body
+{
     background-color: #b0c4de;
 }
