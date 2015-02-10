@@ -3,10 +3,10 @@ div.titlebar
 	background-color: #3A5795;
 	height:	82px;
 	margin: -8px;
-	  
+
     border-width: 1px;
-    border-bottom-width:1px;
-    border-bottom-color:#253961;
+    border-bottom-width: 1px;
+    border-bottom-color: #253961;
     border-bottom-style: solid;
 }
 
@@ -26,7 +26,7 @@ div.after {
 
 body.gradient
 {
-    background: linear-gradient(#FFF, #D3D8E8) repeat scroll 0% 0% transparent;
+    background: linear-gradient(#FFF, #D3D8E8) no-repeat scroll 0% 0% transparent;
 }
 
 body

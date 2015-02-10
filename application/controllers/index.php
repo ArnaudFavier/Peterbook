@@ -1,4 +1,4 @@
-<?php
+<?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 
 class Index extends CI_Controller
 {
@@ -9,8 +9,8 @@ class Index extends CI_Controller
 
 	public function index()
 	{
-		$this->load->view('theme/header');
-		$this->load->view('home');
-		$this->load->view('theme/footer');
+		$this->layout->setTitre('Bienvenue sur Peterbook.');
+		$this->layout->views('headerIndex')
+					->view('home');
 	}
 }
