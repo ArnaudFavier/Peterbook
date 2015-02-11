@@ -8,8 +8,8 @@
 					<td><label class="label_connexion">Password</label></td>		
 				</tr>
 				<tr>
-					<td><input class="input_connexion" type="text" name="login" /></td>
-					<td><input class="input_connexion" type="password" nme="password" /></td>
+					<td><input class="input_connexion" type="text" name="username" /></td>
+					<td><input class="input_connexion" type="password" name="password" /></td>
 					<td><input class ="button_connexion" type="submit" value="Connexion" /></td>
 				</tr>
 			</table>
