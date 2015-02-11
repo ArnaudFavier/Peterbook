@@ -9,7 +9,7 @@ class Index extends CI_Controller
 
 	public function index()
 	{
-		$this->layout->setTitre('Bienvenue sur Peterbook.');
+		$this->layout->setTitre('Welcome on Peterbook.');
 		$this->layout->views('headerIndex')
 					->view('home');
 	}
