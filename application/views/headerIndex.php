@@ -1,9 +1,9 @@
 <div class="titlebar_background">
 	<div class="in_titlebar">
 		<img class="logo" src="assets/img/logo_without_background.png" alt="logo" height="110" width="250"/>
-		<form class="connexion">
-			<label>Login: </label><input type="text" name="login" />
-			<label>Password: </label><input type="password" nme="password" />
+		<form class="connexion" method="post" action="">
+			<label>Login: </label><input type="text" name="username" />
+			<label>Password: </label><input type="password" name="password" />
 			<input type="submit" value="Connexion" />
 		</form>
 	</div>
