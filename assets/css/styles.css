@@ -21,12 +21,54 @@ form.connexion
 {
 	float: right;
 	display: inline;
+	margin-top: -25px;
 }
 
 img.logo
 {
 	margin-top:-40px;
 	padding-right: 300px;
+}
+
+label.label_connexion
+{
+	color: #FFF;
+	font-weight: normal;
+	font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+	font-size: 11px;
+}
+
+input.input_connexion
+{
+	border-color: #1D2A5B;
+	border-width: 1px;
+	width: 142px;
+	margin-right: 30px;
+	height : 20px;
+}
+
+input.button_connexion
+{
+	background-image: url("/rsrc.php/v2/yt/r/-C19xAsFoyr.png");
+background-repeat: no-repeat;
+background-size: auto auto;
+background-position: 0px -49px;
+background-color: #5B74A8;
+border-color: #2F477A #29447E #1A356E;
+
+cursor: pointer;
+display: inline-block;
+font-size: 11px;
+font-weight: bold;
+line-height: 13px;
+padding: 2px 6px;
+text-align: center;
+text-decoration: none;
+vertical-align: top;
+white-space: nowrap;
+color:white;
+border-width: 1px;
+border-color: black;
 }
 
 div.after {
@@ -52,3 +94,4 @@ body
 {
     background-color: #D3D8E8;
 }
+
