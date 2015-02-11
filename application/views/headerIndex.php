@@ -2,9 +2,17 @@
 	<div class="in_titlebar">
 		<img class="logo" src="assets/img/logo_without_background.png" alt="logo" height="110" width="250"/>
 		<form class="connexion" method="post" action="">
-			<label>Login: </label><input type="text" name="username" /><?php echo form_error('username'); ?>
-			<label>Password: </label><input type="password" name="password" /><?php echo form_error('password'); ?>
-			<input type="submit" value="Connexion" />
+			<table>
+				<tr>
+					<td><label class="label_connexion">Login</label></td>
+					<td><label class="label_connexion">Password</label></td>		
+				</tr>
+				<tr>
+					<td><input class="input_connexion" type="text" name="login" /></td>
+					<td><input class="input_connexion" type="password" nme="password" /></td>
+					<td><input class ="button_connexion" type="submit" value="Connexion" /></td>
+				</tr>
+			</table>
 		</form>
 	</div>
 </div>
