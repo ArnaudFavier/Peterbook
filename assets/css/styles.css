@@ -21,6 +21,7 @@ form.connexion
 {
 	float: right;
 	display: inline;
+	color: #FFFFFF;
 }
 
 img.logo
@@ -51,4 +52,5 @@ body.gradient
 body
 {
     background-color: #D3D8E8;
+	font-family: Verdana, Arial;
 }
