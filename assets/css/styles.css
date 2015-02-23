@@ -25,6 +25,13 @@ form.connexion
 	margin-top: -25px;
 }
 
+form.logout
+{
+    float: right;
+    display: inline;
+    color: #FFFFFF;
+}
+
 img.logo
 {
 	margin-top:-40px;
@@ -48,7 +55,7 @@ input.input_connexion
 	height : 20px;
 }
 
-input.button_connexion
+input.button
 {
 	background-image: url("/rsrc.php/v2/yt/r/-C19xAsFoyr.png");
 background-repeat: no-repeat;
@@ -95,4 +102,10 @@ body
 {
     background-color: #D3D8E8;
 	font-family: Verdana, Arial;
+}
+
+#peterbookTitle
+{
+    font-weight: bold;
+    font-style: italic;
 }

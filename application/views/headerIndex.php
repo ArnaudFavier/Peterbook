@@ -10,7 +10,7 @@
 				<tr>
 					<td><input class="input_connexion" type="text" name="username" /></td>
 					<td><input class="input_connexion" type="password" name="password" /></td>
-					<td><input class ="button_connexion" type="submit" value="Connexion" /></td>
+					<td><input class ="button" type="submit" value="Connexion" /></td>
 				</tr>
 			</table>
 		</form>

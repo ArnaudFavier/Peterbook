@@ -47,4 +47,9 @@ class Index extends CI_Controller
 						->view('index');	
 		}
 	}
+
+	public function addPost()
+	{
+		
+	}
 }
