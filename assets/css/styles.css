@@ -44,6 +44,13 @@ form.connexion
 	margin-top: -25px;
 }
 
+form.logout
+{
+    float: right;
+    display: inline;
+    color: #FFFFFF;
+}
+
 img.logo
 {
 	margin-top:-40px;
@@ -191,6 +198,12 @@ body
 {
     background-color: #D3D8E8;
 	font-family: Verdana, Arial;
+}
+
+#peterbookTitle
+{
+    font-weight: bold;
+    font-style: italic;
 }
 
 .subscribe_button
