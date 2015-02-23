@@ -14,4 +14,11 @@ class Post extends CI_Model
 		return $this->db->set(array('USERNAMEPOST' => '', 'CONTENT' =>$content))
 						->insert($this->table);
 	}
+	public function getAllPosts()
+	{
+		return $this->db->select('*')
+				->from($this->table)
+				->get()
+				->result();
+	}
 }
