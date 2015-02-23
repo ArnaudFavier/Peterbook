@@ -25,11 +25,12 @@ class Index extends CI_Controller
 		{
 			$return = $this->login->connectUser($this->input->post('username'),
 												$this->input->post('password'));
-			
-			if($return != false)
-			{
-				$this->session->set_userdata('username', $return[0]->USERNAME);
 
+			$this->session->set_userdata('username', $return[0]->USERNAME);
+		}
+
+		if(!empty($this->session->userdata('username')))
+		{
 				$data = array();
 				$data['username'] = $this->session->userdata('username');
 
@@ -37,7 +38,6 @@ class Index extends CI_Controller
 				$this->layout->views('headerLogin')
 							->view('home', $data);
 				$valide = true;
-			}
 		}
 
 		if($valide == false)
@@ -87,13 +87,5 @@ class Index extends CI_Controller
 			$this->layout->views('headerIndex')
 						->view('index');	
 		}
-		
-		
-		
-	}
-
-	public function addPost()
-	{
-		
-	}
+	}	
 }

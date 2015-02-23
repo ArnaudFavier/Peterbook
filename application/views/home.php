@@ -1,5 +1,5 @@
 <h1>Welcome <?php echo $username; ?></h1>
-<form method="post" action="addPost">
+<form method="post" action="post/addPost">
 	<p>
 		<label for="content">What's new?</label><br />
 		<textarea name="content" id="content"></textarea><br />
