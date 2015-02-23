@@ -4,7 +4,7 @@ class Subscription extends CI_Model
 {
 	private $table = 'user';
 	
-	public function CreateUser($username, $email, $password, $firstname, $lastname)
+	public function createUser($username, $email, $password, $firstname, $lastname)
 	{
 		if(!is_string($username) OR !is_string($password) OR !is_string($email) OR empty($username) OR empty($password) OR empty($email))
 		{
