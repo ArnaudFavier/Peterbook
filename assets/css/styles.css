@@ -3,11 +3,13 @@ div.titlebar_background
 	background-color: #3A5795;
 	height:	82px;
 	margin: -8px;
+	margin-left:0px;
 
     border-width: 1px;
     border-bottom-width: 1px;
     border-bottom-color: #253961;
     border-bottom-style: solid;
+	margin-right:0px;
 }
 
 div.in_titlebar
@@ -34,6 +36,7 @@ div.inscription_page
 	padding-top: 30px;
 	display: table;
     margin: 0 auto;
+	padding-bottom: 80px;
 }
 
 form.connexion
@@ -150,7 +153,7 @@ div.after {
     height: 9px;
     left: 0px;
     right: 0px;
-	margin-top: 7px; margin-left: -8px; margin-right: -8px;
+	margin-top: 7px; margin-left: -8px;
 }
 
 input.subscribe_input_name
@@ -192,12 +195,19 @@ body.gradient
 {
     background: linear-gradient(#FFF, #D3D8E8) no-repeat scroll 0% 0% transparent;
     background-color: #D3D8E8;
+	margin-right:0px;
 }
 
 body
 {
     background-color: #D3D8E8;
 	font-family: Verdana, Arial;
+	margin-left:-10px;
+}
+
+html
+{
+	background:#ffffff;
 }
 
 #peterbookTitle
@@ -224,4 +234,47 @@ body
 	font-weight: bold;
 	color: white;
 	letter-spacing: 1px;
+}
+
+table.post
+{
+	background: #ffffff;
+	width: 800px;
+	
+	border:1px solid black;
+	border-color: #BDC7D8;
+	border-radius: 15px;
+	
+	display: table;
+    margin: 0 auto;
+}
+
+td.top_post
+{
+	background: #f6f7f8; 
+	width: 800px;
+	padding: 20px;
+	padding: 20px;
+	border-bottom:1px solid black;
+	border-color: #BDC7D8;
+}
+
+td.bottom_post
+{
+	background: #ffffff;
+	width: 800px;
+	padding: 20px;
+}
+
+#footer
+{
+	background: #ffffff;
+	margin-left:-50px;
+	height:100%;
+}
+
+.footer_text
+{
+	display: table;
+    margin: 0 auto;
 }

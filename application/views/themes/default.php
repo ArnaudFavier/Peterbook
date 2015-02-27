@@ -11,8 +11,9 @@
 			<?php echo $contenu; ?>
 		</div>
 		<div id="footer">
-			<hr>
-			<p>Peterbook &copy; Copyright <?php echo date('Y'); ?></p>
+			<div class='footer_text'>
+				<p class='prevention'>Peterbook &copy; Copyright <?php echo date('Y'); ?></p>
+			</div>
 		</div>
 	</body>
 </html>
