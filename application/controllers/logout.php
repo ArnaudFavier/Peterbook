@@ -13,6 +13,6 @@ class Logout extends CI_Controller
 
 		$this->session->unset_userdata('username');
 
-		redirect('/index/', 'refresh');
+		redirect('/index/');
 	}
 }

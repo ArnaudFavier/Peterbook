@@ -26,13 +26,13 @@ class Post extends CI_Controller
 			
 			if($return != false)
 			{
-				redirect('/index/', 'refresh');
+				redirect('/home/');
 			}
 		}
 
 		if($valide == false)
 		{
-			redirect('/index/', 'refresh');
+			redirect('/home/');
 		}
 	}
 }

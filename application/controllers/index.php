@@ -11,14 +11,14 @@ class Index extends CI_Controller
 	{
 		$this->load->database();
 		$this->load->model('login');
-
+		$this->load->helper('url');
 		$this->load->library('form_validation');
 
 		$this->form_validation->set_error_delimiters('<p class="form_error">', '</p>');
 
 		$this->form_validation->set_rules('username',  '"Username"',  'trim|required|min_length[3]|max_length[256]|alpha_dash');
 		$this->form_validation->set_rules('password', '"Password"', 'trim|required|min_length[3]|max_length[256]');
-		
+
 		$valide = false;
 
 		if($this->form_validation->run())
@@ -31,13 +31,7 @@ class Index extends CI_Controller
 
 		if(!empty($this->session->userdata('username')))
 		{
-				$data = array();
-				$data['username'] = $this->session->userdata('username');
-
-				$this->layout->setTitre('Welcome on Peterbook.');
-				$this->layout->views('headerLogin')
-							->view('home', $data);
-				$valide = true;
+			redirect('/home/');
 		}
 
 		if($valide == false)

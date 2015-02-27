@@ -1,4 +1,5 @@
 <div class="inscription_page">
+	<?php echo form_error('username') ?><?php echo form_error('password') ?>
 	<table>
 		<tr>
 			<td>

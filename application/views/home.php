@@ -8,4 +8,6 @@
 </form>
 <hr>
 <p>All posts from <span id="peterbookTitle">Peterbook</span>:</p>
-<p>-</p>
+<?php foreach($allPosts as $numPost => $post) {
+	echo $post->USERNAMEPOST . " said: " . $post->CONTENT . "<br />";
+} ?>
