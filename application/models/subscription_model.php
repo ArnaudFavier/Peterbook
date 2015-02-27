@@ -1,6 +1,6 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 
-class Subscription extends CI_Model
+class Subscription_model extends CI_Model
 {
 	private $table = 'user';
 	
@@ -11,11 +11,8 @@ class Subscription extends CI_Model
 			return false;
 		}
 		
-		return $this->db->set('USERNAME',$username)
-			->set('EMAIL', 	 $email)
-			->set('PASSWORD', $password)
-			->set('FIRSTNAME', $firstname)
-			->set('LASTNAME', $lastname)
+		return $this->db->set(array('USERNAME' => $username,'EMAIL' => $email,'PASSWORD' => $password,'FIRSTNAME' => $firstname,'LASTNAME' => $lastname))
 			->insert($this->table);
+
 	}
 }
