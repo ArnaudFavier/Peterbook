@@ -1,13 +1,12 @@
 <table class='post'>
 	<tr>
 		<td class='top_post'>
-			<h2>Welcome <?php echo $username; ?></h2>
+			<h2>What's new, <?php echo $username; ?> ?</h2>
 		</td>
 	</tr>
 	<tr >
 		<td class='bottom_post'>
 			<form method="post" action="post/addPost">
-				<label for="content">What's new?</label><br />
 				<textarea name="content" id="content"></textarea><br />
 				<input class ="button" type="submit" value="Post" />
 			</form>	

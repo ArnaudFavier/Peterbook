@@ -283,3 +283,14 @@ td.bottom_post
 	display: table;
     margin: 0 auto;
 }
+
+#content
+{
+	width: 752px;
+	height: 101px;
+	background: none repeat scroll 0% 0% transparent;
+	border: 0px solid;
+	resize: none;
+	font-size: 16px;
+	font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+}
