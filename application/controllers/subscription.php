@@ -29,6 +29,14 @@ class Subscription extends CI_Controller
 												$this->input->post('password'),
 												$this->input->post('firstname'),
 												$this->input->post('lastname'));
+												
+			$this->session->set_userdata('firstname', $return[0]->USERNAME);
+			//redirect('/headerLogin/');					
+		}
+		
+		else{
+			echo "Error Subscription (fields empty or email doesn't match)";
+			
 		}
 		redirect('/index/');
 	}

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Lun 09 Février 2015 à 10:17
+-- Généré le :  Lun 02 Mars 2015 à 11:05
 -- Version du serveur :  5.6.20
 -- Version de PHP :  5.5.15
 
@@ -34,6 +34,14 @@ CREATE TABLE IF NOT EXISTS `ci_sessions` (
   `user_data` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Contenu de la table `ci_sessions`
+--
+
+INSERT INTO `ci_sessions` (`session_id`, `ip_address`, `user_agent`, `last_activity`, `user_data`) VALUES
+('770c29e75e3a23f33db5189d9af71173', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:35.0) Gecko/20100101 Firefox/35.0', 1425290009, ''),
+('b9c362ab8f83c17b11fd47cd8a633097', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:35.0) Gecko/20100101 Firefox/35.0', 1425028373, 'a:2:{s:9:"user_data";s:0:"";s:9:"firstname";N;}');
+
 -- --------------------------------------------------------
 
 --
@@ -41,11 +49,11 @@ CREATE TABLE IF NOT EXISTS `ci_sessions` (
 --
 
 CREATE TABLE IF NOT EXISTS `comment` (
-`IDCOMMENT` int(11) NOT NULL,
-  `USERNAMECOMMENT` varchar(30) NOT NULL,
-  `ID_POST` int(11) NOT NULL,
-  `TEXT` varchar(500) NOT NULL,
-  `DATE` date NOT NULL
+`idcomment` int(11) NOT NULL,
+  `emailcomment` varchar(30) NOT NULL,
+  `id_post` int(11) NOT NULL,
+  `text` varchar(500) NOT NULL,
+  `date` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
@@ -55,10 +63,15 @@ CREATE TABLE IF NOT EXISTS `comment` (
 --
 
 CREATE TABLE IF NOT EXISTS `post` (
-`IDPOST` int(11) NOT NULL,
-  `USERNAMEPOST` varchar(20) NOT NULL,
-  `CONTENT` varchar(2000) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+`idpost` int(11) NOT NULL,
+  `emailpost` varchar(20) NOT NULL,
+  `content` varchar(2000) NOT NULL,
+  `date` date NOT NULL
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
+
+--
+-- Contenu de la table `post`
+--
 
 -- --------------------------------------------------------
 
@@ -67,14 +80,17 @@ CREATE TABLE IF NOT EXISTS `post` (
 --
 
 CREATE TABLE IF NOT EXISTS `user` (
-  `USERNAME` varchar(20) NOT NULL,
-  `EMAIL` varchar(30) NOT NULL,
-  `PASSWORD` varchar(50) NOT NULL,
-  `DESCRIPTION` varchar(100) NOT NULL,
-  `PICTURE` varchar(50) NOT NULL,
-  `FIRSTNAME` varchar(20) NOT NULL,
-  `LASTNAME` varchar(20) NOT NULL
+  `email` varchar(30) NOT NULL,
+  `password` varchar(50) NOT NULL,
+  `description` varchar(100) NOT NULL,
+  `picture` varchar(50) NOT NULL,
+  `firstname` varchar(20) NOT NULL,
+  `lastname` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `user`
+--
 
 --
 -- Index pour les tables exportées
@@ -90,19 +106,19 @@ ALTER TABLE `ci_sessions`
 -- Index pour la table `comment`
 --
 ALTER TABLE `comment`
- ADD PRIMARY KEY (`IDCOMMENT`), ADD UNIQUE KEY `FOREIGN` (`USERNAMECOMMENT`), ADD UNIQUE KEY `FOREIGN2` (`ID_POST`);
+ ADD PRIMARY KEY (`idcomment`), ADD KEY `FOREIGN` (`emailcomment`), ADD KEY `FOREIGN2` (`id_post`);
 
 --
 -- Index pour la table `post`
 --
 ALTER TABLE `post`
- ADD PRIMARY KEY (`IDPOST`), ADD UNIQUE KEY `FOREIGN` (`USERNAMEPOST`);
+ ADD PRIMARY KEY (`idpost`), ADD KEY `FOREIGN` (`emailpost`);
 
 --
 -- Index pour la table `user`
 --
 ALTER TABLE `user`
- ADD PRIMARY KEY (`USERNAME`);
+ ADD PRIMARY KEY (`email`);
 
 --
 -- AUTO_INCREMENT pour les tables exportées
@@ -112,12 +128,12 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT pour la table `comment`
 --
 ALTER TABLE `comment`
-MODIFY `IDCOMMENT` int(11) NOT NULL AUTO_INCREMENT;
+MODIFY `idcomment` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT pour la table `post`
 --
 ALTER TABLE `post`
-MODIFY `IDPOST` int(11) NOT NULL AUTO_INCREMENT;
+MODIFY `idpost` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
 --
 -- Contraintes pour les tables exportées
 --
@@ -126,14 +142,14 @@ MODIFY `IDPOST` int(11) NOT NULL AUTO_INCREMENT;
 -- Contraintes pour la table `comment`
 --
 ALTER TABLE `comment`
-ADD CONSTRAINT `comment_ibfk_1` FOREIGN KEY (`ID_POST`) REFERENCES `post` (`IDPOST`),
-ADD CONSTRAINT `username` FOREIGN KEY (`USERNAMECOMMENT`) REFERENCES `user` (`USERNAME`);
+ADD CONSTRAINT `comment_ibfk_1` FOREIGN KEY (`id_post`) REFERENCES `post` (`idpost`),
+ADD CONSTRAINT `email` FOREIGN KEY (`emailcomment`) REFERENCES `user` (`email`);
 
 --
 -- Contraintes pour la table `post`
 --
 ALTER TABLE `post`
-ADD CONSTRAINT `post_ibfk_1` FOREIGN KEY (`USERNAMEPOST`) REFERENCES `user` (`USERNAME`);
+ADD CONSTRAINT `post_ibfk_1` FOREIGN KEY (`emailpost`) REFERENCES `user` (`email`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
