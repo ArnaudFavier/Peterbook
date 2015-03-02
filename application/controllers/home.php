@@ -11,6 +11,7 @@ class Home extends CI_Controller
 	{
 		$this->load->database();
 		$this->load->model('post_model');
+		$this->load->helper('url');
 		$this->load->library('form_validation');
 
 		$this->form_validation->set_error_delimiters('<p class="form_error">', '</p>');
@@ -27,6 +28,10 @@ class Home extends CI_Controller
 			$this->layout->setTitre('Welcome on Peterbook.');
 			$this->layout->views('headerLogin')
 						->view('home', $data);
+		}
+		else
+		{
+			redirect('/index/');
 		}
 	}
 	

@@ -18,7 +18,7 @@
 	<table class='post'>
 		<tr>
 			<td class='top_post'>
-				<?php echo $post->emailpost . " said: "; ?>
+				<?php echo $post->emailpost . " said: (" . date("j F Y H:i",$post->date) . ")"; ?>
 			</td>
 		</tr>
 		<tr >

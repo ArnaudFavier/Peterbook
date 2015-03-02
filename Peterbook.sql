@@ -53,7 +53,7 @@ CREATE TABLE IF NOT EXISTS `comment` (
   `emailcomment` varchar(30) NOT NULL,
   `id_post` int(11) NOT NULL,
   `text` varchar(500) NOT NULL,
-  `date` date NOT NULL
+  `date` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------

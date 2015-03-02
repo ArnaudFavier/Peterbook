@@ -26,7 +26,10 @@ class Index extends CI_Controller
 			$return = $this->login->connectUser($this->input->post('email'),
 												$this->input->post('password'));
 
-			$this->session->set_userdata('email', $return[0]->email);
+			if(!empty($return))
+			{
+				$this->session->set_userdata('email', $return[0]->email);
+			}
 		}
 
 		if(!empty($this->session->userdata('email')))
@@ -38,7 +41,7 @@ class Index extends CI_Controller
 		{
 			$this->layout->setTitre('Welcome on Peterbook.');
 			$this->layout->views('headerIndex')
-						->view('index');	
+						->view('index');
 		}
 	}
 	
