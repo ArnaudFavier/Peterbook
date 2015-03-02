@@ -22,7 +22,8 @@ class Home extends CI_Controller
 		if(!empty($this->session->userdata('email')))
 		{
 			$data = array();
-			$data['email'] = $this->session->userdata('email');
+			$data['firstname'] = $this->session->userdata('firstname');
+			$data['lastname'] = $this->session->userdata('lastname');
 			$data['allPosts'] = $this->post_model->getAllPosts();
 
 			$this->layout->setTitre('Welcome on Peterbook.');

@@ -11,6 +11,8 @@ class Post_Model extends CI_Model
 			return false;
 		}
 
+		$content = htmlspecialchars($content);
+
 		return $this->db->set(array('emailpost' => $email, 'content' =>$content, 'date' => time()))
 						->insert($this->table);
 	}
