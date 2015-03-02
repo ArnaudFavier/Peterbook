@@ -34,7 +34,7 @@
 						<td colspan="2" class='prevention'>By clicking on Subscribe, you accept our cookie's utilisation, to give your soul to Satan, and many other condition.</td>
 					</tr>
 					<tr>
-						<td colspan="2"><input type='submit' class='subscribe_button'></input></td>
+						<td colspan="2"><input type='submit' class='subscribe_button' value='Submit'></input></td>
 					</tr>
 				</table>
 				</form>
