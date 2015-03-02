@@ -29,6 +29,8 @@ class Index extends CI_Controller
 			if(!empty($return))
 			{
 				$this->session->set_userdata('email', $return[0]->email);
+				$this->session->set_userdata('firstname', $return[0]->firstname);
+				$this->session->set_userdata('lastname', $return[0]->lastname);
 			}
 		}
 

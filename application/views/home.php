@@ -1,7 +1,7 @@
 <table class='post'>
 	<tr>
 		<td class='top_post'>
-			<h2>What's new, <?php echo $email; ?>?</h2>
+			<h2>What's new, <?php echo $firstname . " " . $lastname; ?>?</h2>
 		</td>
 	</tr>
 	<tr >
