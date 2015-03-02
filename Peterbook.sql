@@ -1,4 +1,4 @@
--- phpMyAdmin SQL Dump
+﻿-- phpMyAdmin SQL Dump
 -- version 4.2.7.1
 -- http://www.phpmyadmin.net
 --
@@ -73,7 +73,7 @@ CREATE TABLE IF NOT EXISTS `post` (
 -- Contenu de la table `post`
 --
 
--- --------------------------------------------------------
+-- ---------------------------------------------------------
 
 --
 -- Structure de la table `user`
