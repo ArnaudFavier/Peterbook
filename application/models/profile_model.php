@@ -4,31 +4,16 @@ class Profile_Model extends CI_Model
 {
 	private $table = 'user';
 	
-	public function getFirstName($email)
+	public function displayUserProfile($email)
 	{
 		if(!is_string($email) OR empty($email))
 		{
 			return false;
 		}
-		
-		return $this->db->select('firstname')
-						->from($this->table)
-						->where(array('email' => $email)
-						->get()
-						->result();
-	}
-
-	public function getLastName($email)
-	{
-		if(!is_string($email) OR empty($email))
-		{
-			return false;
-		}
-		
-		return $this->db->select('lastname')
-						->from($this->table)
-						->where(array('email' => $email)
-						->get()
-						->result();
+		return $this->db->select('picture, description, firstname, lastname')
+				->from($this->table)
+				->where('email' = $email)
+				->get()
+				->result();
 	}
 }
