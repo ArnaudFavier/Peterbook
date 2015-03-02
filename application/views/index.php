@@ -28,13 +28,13 @@
 						<td colspan="2"><input type='text' class='subscribe_input' placeholder='Confirm your email' name='email2'></input></td>
 					</tr>
 					<tr>
-						<td colspan="2"><input type='text' class='subscribe_input' placeholder='Password' name='password'></input></td>
+						<td colspan="2"><input type='password' class='subscribe_input' placeholder='Password' name='password'></input></td>
 					</tr>
-					<tr>
+					<tr class='prevention'>
 						<td colspan="2" class='prevention'>By clicking on Subscribe, you accept our cookie's utilisation, to give your soul to Satan, and many other condition.</td>
 					</tr>
 					<tr>
-						<td colspan="2"><input type='submit' class='subscribe_button'></input></td>
+						<td colspan="2"><input type='submit' class='subscribe_button' value='Submit'></input></td>
 					</tr>
 				</table>
 				</form>

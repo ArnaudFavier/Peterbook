@@ -4,7 +4,7 @@
 		<form class="connexion" method="post" action="">
 			<table>
 				<tr>
-					<td><label class="label_connexion">Login</label></td>
+					<td><label class="label_connexion">Email</label></td>
 					<td><label class="label_connexion">Password</label></td>		
 				</tr>
 				<tr>

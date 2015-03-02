@@ -28,7 +28,7 @@ div.inscription_main_text
 	width: 450px;
 	word-spacing: -1px;
 	margin-bottom: 10px;
-	margin-top:-50px;
+	margin-top:-90px;
 }
 
 div.inscription_page
@@ -105,7 +105,6 @@ border-color: black;
 {
 	color: #141823;
 	font-size: 36px;
-	white-space: nowrap;
 	font-family: "Freight Sans Bold","lucida grande",tahoma,verdana,arial,sans-serif;
 }
 
@@ -257,6 +256,9 @@ td.top_post
 	padding: 20px;
 	border-bottom:1px solid black;
 	border-color: #BDC7D8;
+	
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
 }
 
 td.bottom_post
@@ -264,6 +266,9 @@ td.bottom_post
 	background: #ffffff;
 	width: 800px;
 	padding: 20px;
+	
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
 }
 
 #footer
