@@ -22,7 +22,7 @@ class Post extends CI_Controller
 
 		if($this->form_validation->run())
 		{
-			$return = $this->post_model->addPost($this->session->userdata('username'), $this->input->post('content'));
+			$return = $this->post_model->addPost($this->session->userdata('email'), $this->input->post('content'));
 			
 			if($return != false)
 			{

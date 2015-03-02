@@ -13,6 +13,5 @@ A little social network named Peterbook developed in PHP with CodeIgniter for th
 ##Installation
 - PHP version >= 5.5.x (Apache >= 2.4.x, MySQL >= 5.6.x)
 - Create a database named *peterbook*
-- Execute the SQL in *peterbook.sql* file
-- Modify index type in *post* table structure (foreign USERNAMEPOST -> INDEX (not UNIQUE))
+- Execute the SQL in *Peterbook.sql* file
 - Activate Apache *rewrite_module* module

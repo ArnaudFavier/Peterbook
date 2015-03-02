@@ -4,14 +4,14 @@ class Subscription_model extends CI_Model
 {
 	private $table = 'user';
 	
-	public function createUser($username, $email, $password, $firstname, $lastname)
+	public function createUser($email, $password, $firstname, $lastname)
 	{
-		if(!is_string($username) OR !is_string($password) OR !is_string($email) OR empty($username) OR empty($password) OR empty($email))
+		if(!is_string($email) OR !is_string($password) OR !is_string($firstname) OR !is_string($lastname) OR empty($email) OR empty($password) OR empty($firstname) OR empty($lastname))
 		{
 			return false;
 		}
 		
-		return $this->db->set(array('USERNAME' => $username,'EMAIL' => $email,'PASSWORD' => $password,'FIRSTNAME' => $firstname,'LASTNAME' => $lastname))
+		return $this->db->set(array('email' => $email,'password' => $password,'firstname' => $firstname,'lastname' => $lastname))
 			->insert($this->table);
 
 	}

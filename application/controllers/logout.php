@@ -11,7 +11,7 @@ class Logout extends CI_Controller
 	{
 		$this->load->helper('url');
 
-		$this->session->unset_userdata('username');
+		$this->session->unset_userdata('email');
 
 		redirect('/index/');
 	}

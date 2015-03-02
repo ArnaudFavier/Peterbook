@@ -24,8 +24,7 @@ class Subscription extends CI_Controller
 
 		if($this->form_validation->run() && $this->input->post('email') == $this->input->post('email2'))
 		{
-			$return = $this->subscription_model->createUser($this->input->post('firstname'),
-												$this->input->post('email'),
+			$return = $this->subscription_model->createUser($this->input->post('email'),
 												$this->input->post('password'),
 												$this->input->post('firstname'),
 												$this->input->post('lastname'));

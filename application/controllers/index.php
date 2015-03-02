@@ -16,20 +16,20 @@ class Index extends CI_Controller
 
 		$this->form_validation->set_error_delimiters('<p class="form_error">', '</p>');
 
-		$this->form_validation->set_rules('username',  '"Username"',  'trim|required|min_length[3]|max_length[256]|alpha_dash');
+		$this->form_validation->set_rules('email',  '"Email"',  'trim|required|min_length[3]|max_length[256]');
 		$this->form_validation->set_rules('password', '"Password"', 'trim|required|min_length[3]|max_length[256]');
 
 		$valide = false;
 
 		if($this->form_validation->run())
 		{
-			$return = $this->login->connectUser($this->input->post('username'),
+			$return = $this->login->connectUser($this->input->post('email'),
 												$this->input->post('password'));
 
-			$this->session->set_userdata('username', $return[0]->USERNAME);
+			$this->session->set_userdata('email', $return[0]->email);
 		}
 
-		if(!empty($this->session->userdata('username')))
+		if(!empty($this->session->userdata('email')))
 		{
 			redirect('/home/');
 		}

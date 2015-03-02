@@ -15,13 +15,13 @@ class Home extends CI_Controller
 
 		$this->form_validation->set_error_delimiters('<p class="form_error">', '</p>');
 
-		//$this->form_validation->set_rules('username',  '"Username"',  'trim|required|min_length[3]|max_length[256]|alpha_dash');
+		//$this->form_validation->set_rules('email',  '"Email"',  'trim|required|min_length[3]|max_length[256]|alpha_dash');
 		//$this->form_validation->set_rules('password', '"Password"', 'trim|required|min_length[3]|max_length[256]');
 
-		if(!empty($this->session->userdata('username')))
+		if(!empty($this->session->userdata('email')))
 		{
 			$data = array();
-			$data['username'] = $this->session->userdata('username');
+			$data['email'] = $this->session->userdata('email');
 			$data['allPosts'] = $this->post_model->getAllPosts();
 
 			$this->layout->setTitre('Welcome on Peterbook.');

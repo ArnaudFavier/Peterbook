@@ -1,7 +1,7 @@
 <table class='post'>
 	<tr>
 		<td class='top_post'>
-			<h2>What's new, <?php echo $username; ?> ?</h2>
+			<h2>What's new, <?php echo $email; ?>?</h2>
 		</td>
 	</tr>
 	<tr >
@@ -18,12 +18,12 @@
 	<table class='post'>
 		<tr>
 			<td class='top_post'>
-				<?php echo $post->USERNAMEPOST . " said: "; ?>
+				<?php echo $post->emailpost . " said: "; ?>
 			</td>
 		</tr>
 		<tr >
 			<td class='bottom_post'>
-				<?php  echo $post->CONTENT; ?>
+				<?php  echo $post->content; ?>
 			</td>
 		</tr>
 	</table>

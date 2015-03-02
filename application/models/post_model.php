@@ -4,22 +4,22 @@ class Post_Model extends CI_Model
 {
 	private $table = 'post';
 	
-	public function addPost($username, $content)
+	public function addPost($email, $content)
 	{
-		if(!is_string($username) OR !is_string($content) OR empty($username) OR empty($content))
+		if(!is_string($email) OR !is_string($content) OR empty($email) OR empty($content))
 		{
 			return false;
 		}
 
-		return $this->db->set(array('USERNAMEPOST' => $username, 'CONTENT' =>$content))
+		return $this->db->set(array('emailpost' => $email, 'content' =>$content, 'date' => time()))
 						->insert($this->table);
 	}
 
 	public function getAllPosts()
 	{
-		return $this->db->select('IDPOST, USERNAMEPOST, CONTENT')
+		return $this->db->select('idpost, emailpost, content, date')
 				->from($this->table)
-				->order_by('IDPOST', 'desc')
+				->order_by('idpost', 'desc')
 				->get()
 				->result();
 	}

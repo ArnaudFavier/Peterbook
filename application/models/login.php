@@ -4,16 +4,16 @@ class Login extends CI_Model
 {
 	private $table = 'user';
 	
-	public function connectUser($username, $password)
+	public function connectUser($email, $password)
 	{
-		if(!is_string($username) OR !is_string($password) OR empty($username) OR empty($password))
+		if(!is_string($email) OR !is_string($password) OR empty($email) OR empty($password))
 		{
 			return false;
 		}
 		
-		return $this->db->select('USERNAME, EMAIL, DESCRIPTION, PICTURE, FIRSTNAME, LASTNAME	')
+		return $this->db->select('email, firstname, lastname')
 						->from($this->table)
-						->where(array('USERNAME' => $username, 'PASSWORD' => $password))
+						->where(array('email' => $email, 'password' => $password))
 						->get()
 						->result();
 	}
