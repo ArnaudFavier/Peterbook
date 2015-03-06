@@ -10,9 +10,6 @@ class Editprofile extends CI_Controller
 	
 	public function index()
 	{
-		$this->layout->setTitre('Edit profile.');
-		$this->layout->views('headerLogin')
-					->view('editprofile');
 		$this->load->library('form_validation');
 					
 		$this->form_validation->set_error_delimiters('<p class="form_error">', '</p>');
@@ -29,11 +26,12 @@ class Editprofile extends CI_Controller
 		}
 		
 		else{
-			echo "Error Subscription (fields empty or email doesn't match)";
 			
 		}
-		redirect('/index/');
 		
+		$this->layout->setTitre('Edit profile.');
+		$this->layout->views('headerLogin')
+					->view('editprofile');
 		
 	}
 }
