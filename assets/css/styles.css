@@ -282,6 +282,7 @@ td.bottom_post
 {
 	display: table;
     margin: 0 auto;
+	text-align: center;
 }
 
 #content
