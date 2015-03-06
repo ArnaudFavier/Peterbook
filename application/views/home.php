@@ -18,7 +18,7 @@
 	<table class='post'>
 		<tr>
 			<td class='top_post'>
-				<?php echo $post->emailpost . " said: (" . date("j F Y H:i",$post->date) . ")"; ?>
+				<?php echo $post->firstname . ' ' . $post->lastname . " said: (" . date("j F Y H:i",$post->date) . ")"; ?>
 			</td>
 		</tr>
 		<tr >
@@ -26,8 +26,8 @@
 				<?php  
 					$message = $post->content;
 					
-					$smiley   = array("O:)",">:O",":D","☺","o.O",":'(",":3","3:)",":(",">:(","<3","^_^",":*",":v",":)","-_-",":O",":P",":/",";)",":sick:",":work:");
-					$image   = array(
+					$smiley = array("O:)",">:O",":D","☺","o.O",":'(",":3","3:)",":(",">:(","<3","^_^",":*",":v",":)","-_-",":O",":P",":/",";)",":sick:",":work:");
+					$image = array(
 						"<img src=\"assets/img/smiley/angel.png\" alt=\"smiley\"/>",
 						"<img src=\"assets/img/smiley/angry.png\" alt=\"smiley\"/>",
 						"<img src=\"assets/img/smiley/bigsmile.png\" alt=\"smiley\"/>",

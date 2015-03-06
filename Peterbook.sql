@@ -50,9 +50,9 @@ INSERT INTO `ci_sessions` (`session_id`, `ip_address`, `user_agent`, `last_activ
 
 CREATE TABLE IF NOT EXISTS `comment` (
 `idcomment` int(11) NOT NULL,
-  `emailcomment` varchar(30) NOT NULL,
+  `emailcomment` varchar(255) NOT NULL,
   `id_post` int(11) NOT NULL,
-  `text` varchar(500) NOT NULL,
+  `text` varchar(255) NOT NULL,
   `date` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
@@ -64,9 +64,9 @@ CREATE TABLE IF NOT EXISTS `comment` (
 
 CREATE TABLE IF NOT EXISTS `post` (
 `idpost` int(11) NOT NULL,
-  `emailpost` varchar(20) NOT NULL,
-  `content` varchar(2000) NOT NULL,
-  `date` date NOT NULL
+  `emailpost` varchar(255) NOT NULL,
+  `content` text NOT NULL,
+  `date` int(11) NOT NULL
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
 
 --
@@ -80,12 +80,12 @@ CREATE TABLE IF NOT EXISTS `post` (
 --
 
 CREATE TABLE IF NOT EXISTS `user` (
-  `email` varchar(30) NOT NULL,
-  `password` varchar(50) NOT NULL,
-  `description` varchar(100) NOT NULL,
-  `picture` varchar(50) NOT NULL,
-  `firstname` varchar(20) NOT NULL,
-  `lastname` varchar(20) NOT NULL
+  `email` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `description` varchar(255) NOT NULL,
+  `picture` varchar(255) NOT NULL,
+  `firstname` varchar(255) NOT NULL,
+  `lastname` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --

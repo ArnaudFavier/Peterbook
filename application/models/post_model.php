@@ -19,8 +19,9 @@ class Post_Model extends CI_Model
 
 	public function getAllPosts()
 	{
-		return $this->db->select('idpost, emailpost, content, date')
+		return $this->db->select('idpost, emailpost, content, date, firstname, lastname')
 				->from($this->table)
+				->join('user', 'user.email = '. $this->table .'.emailpost')
 				->order_by('idpost', 'desc')
 				->get()
 				->result();

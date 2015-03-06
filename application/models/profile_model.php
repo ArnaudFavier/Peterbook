@@ -12,7 +12,7 @@ class Profile_Model extends CI_Model
 		}
 		return $this->db->select('picture, description, firstname, lastname')
 				->from($this->table)
-				->where('email' = $email)
+				->where('email', $email)
 				->get()
 				->result();
 	}

@@ -10,7 +10,8 @@ class Home extends CI_Controller
 	public function index()
 	{
 		$this->load->database();
-		$this->load->model('post_model');
+		$this->load->model('post_model', 'post_model');
+		$this->load->model('profile_model', 'profile_model');
 		$this->load->helper('url');
 		$this->load->library('form_validation');
 
