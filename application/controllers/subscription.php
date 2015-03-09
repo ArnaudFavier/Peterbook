@@ -35,7 +35,7 @@ class Subscription extends CI_Controller
 		}
 		else
 		{
-			$this->session->set_flashdata('errors', validation_errors() . 'The "Emails" can be differents.');
+			$this->session->set_flashdata('errors', validation_errors() . '<p class="form_error">The "Emails" can be differents.</p>');
 		}
 		
 		redirect('/index/');

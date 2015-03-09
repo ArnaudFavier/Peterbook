@@ -19,6 +19,14 @@
 	<table class='post'>
 		<tr>
 			<td class='top_post'>
+				<?php if(!empty($post->picture))
+					{
+						echo '<img src="assets/img/upload/' . $post->picture . '" height="50" width="50">';
+					}
+					else
+					{
+					 	echo '<img src="assets/img/photo.jpg" height="50" width="50">';
+					} ?>
 				<?php echo $post->firstname . ' ' . $post->lastname . " said: (" . date("j F Y H:i",$post->date) . ")"; ?>
 			</td>
 		</tr>
