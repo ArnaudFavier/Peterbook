@@ -1,3 +1,4 @@
+<p class="form_error"><?php echo $errors; ?></p>
 <table class='post'>
 	<tr>
 		<td class='top_post'>
@@ -55,6 +56,11 @@
 					$message = str_replace($smiley,$image,$message);
 					echo $message;
 				?>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<?php if(!empty($post->description)){echo "<hr>- " . $post->description;} ?>
 			</td>
 		</tr>
 	</table>

@@ -35,7 +35,7 @@ class Subscription extends CI_Controller
 		}
 		else
 		{
-			echo "Error Subscription (fields empty or email doesn't match)";
+			$this->session->set_flashdata('errors', validation_errors() . 'The "Emails" can be differents.');
 		}
 		
 		redirect('/index/');

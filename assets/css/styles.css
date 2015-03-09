@@ -330,3 +330,14 @@ td.humor
 	padding-top: 30px;
 	padding-bottom: 30px;
 }
+
+.form_error
+{
+	text-align: center;
+	padding-left: 50px;
+	Line-Height: 30pt;
+	
+	font-size: 16px;
+	font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+	color: red;
+}
