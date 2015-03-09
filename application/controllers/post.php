@@ -12,12 +12,12 @@ class Post extends CI_Controller
 		$this->load->database();
 		$this->load->model('post_model');
 		$this->load->helper('url');
-
 		$this->load->library('form_validation');
 
 		$this->form_validation->set_error_delimiters('<p class="form_error">', '</p>');
 
-		$this->form_validation->set_rules('content',  '"Content"',  'trim|required|min_length[1]|max_length[2000]');
+		$this->form_validation->set_rules('content',  '"Content"',  'trim|required|min_length[1]');
+
 		$valide = false;
 
 		if($this->form_validation->run())
@@ -28,7 +28,11 @@ class Post extends CI_Controller
 			{
 				redirect('/home/');
 			}
+
+			$this->session->set_flashdata('errors','Error : database problem (addPost).');
 		}
+
+		$this->session->set_flashdata('errors', validation_errors());
 
 		if($valide == false)
 		{

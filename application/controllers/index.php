@@ -39,11 +39,13 @@ class Index extends CI_Controller
 			redirect('/home/');
 		}
 
+		$data['errors'] = $this->session->flashdata('errors');
+
 		if($valide == false)
 		{
 			$this->layout->setTitre('Welcome on Peterbook.');
 			$this->layout->views('headerIndex')
-						->view('index');
+						->view('index', $data);
 		}
 	}
 	

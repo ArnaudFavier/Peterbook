@@ -13,12 +13,6 @@ class Home extends CI_Controller
 		$this->load->model('post_model', 'post_model');
 		$this->load->model('profile_model', 'profile_model');
 		$this->load->helper('url');
-		$this->load->library('form_validation');
-
-		$this->form_validation->set_error_delimiters('<p class="form_error">', '</p>');
-
-		//$this->form_validation->set_rules('email',  '"Email"',  'trim|required|min_length[3]|max_length[256]|alpha_dash');
-		//$this->form_validation->set_rules('password', '"Password"', 'trim|required|min_length[3]|max_length[256]');
 
 		if(!empty($this->session->userdata('email')))
 		{
@@ -26,6 +20,7 @@ class Home extends CI_Controller
 			$data['firstname'] = $this->session->userdata('firstname');
 			$data['lastname'] = $this->session->userdata('lastname');
 			$data['allPosts'] = $this->post_model->getAllPosts();
+			$data['errors'] = $this->session->flashdata('errors');
 
 			$this->layout->setTitre('Welcome on Peterbook.');
 			$this->layout->views('headerLogin')
