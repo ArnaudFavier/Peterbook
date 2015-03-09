@@ -190,6 +190,25 @@ form.subscribe_form
 	margin-left:30px;
 }
 
+img.picture
+{
+	padding: 5px;
+	background: #ffffff;
+	height: 150px;
+	width: 150px;
+	
+	border-radius: 10px;
+	border:1px solid black;
+	border-color: #BDC7D8;
+}
+
+div.center_div
+{
+	display: table;
+    margin: 0 auto;
+	text-align: center;
+}
+
 body.gradient
 {
     background: linear-gradient(#FFF, #D3D8E8) no-repeat scroll 0% 0% transparent;
@@ -294,4 +313,20 @@ td.bottom_post
 	resize: none;
 	font-size: 16px;
 	font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+}
+
+td.center
+{
+	text-align: center;
+	padding-left: 50px;
+	Line-Height: 30pt;
+}
+
+td.humor
+{
+	text-align: center;
+	padding-left: 50px;
+	Line-Height: 30pt;
+	padding-top: 30px;
+	padding-bottom: 30px;
 }
