@@ -9,7 +9,7 @@
 					Change your profile picture</br>
 					<input type='file' name='picture' src='assets/img/photo.jpg' accept='image/*'></input>
 				</td>	
-			</tr>
+			</tr> 
 			<tr>
 				<td class='humor free' colspan='2'>
 					Edit your humor message : 
