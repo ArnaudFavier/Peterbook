@@ -4,7 +4,7 @@
 	<form class='editprofile' method='post' action='editprofile/'>
 		<table>
 			<tr>
-				<td><img class='picture' src='assets/img/photo.jpg' alt='photo de profil'/></td>
+				<td><img class='picture' src='assets/img/upload/<?php echo $picture; ?>' alt='photo de profil'/></td>
 				<td class='center free'>
 					Change your profile picture</br>
 					<input type='file' name='picture' src='assets/img/photo.jpg' accept='image/*'></input>
