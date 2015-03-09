@@ -11,6 +11,7 @@ class Editprofile extends CI_Controller
 	public function index()
 	{
 		$this->load->library('form_validation');
+		$this->load->model('profile_model');
 					
 		$this->form_validation->set_error_delimiters('<p class="form_error">', '</p>');
 
@@ -22,16 +23,21 @@ class Editprofile extends CI_Controller
 			$return = $this->profile_model->editUserProfile($this->session->userdata('email'),
 															$this->input->post('picture'),
 															$this->input->post('description'));
-			
+		redirect('/index/');
+															
+														
 		}
 		
 		else{
-			
 		}
+		$variable = $this->profile_model->displayUserProfile($this->session->userdata('email'));
+			$data = array();
+			$data['description'] = $variable[0]->description;
+			$data['picture'] =$variable[0]->picture;
 		
 		$this->layout->setTitre('Edit profile.');
 		$this->layout->views('headerLogin')
-					->view('editprofile');
+					->view('editprofile',$data);
 		
 	}
 }
