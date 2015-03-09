@@ -23,9 +23,10 @@ class Profile_Model extends CI_Model
 		{
 			return false;
 		}
+		if($newpic != "")
 		$this->db->set('picture', $newpic);
+		if($newdesc != "")
 		$this->db->set('description', $newdesc);
-		
 		$this->db->where('email', $email);
 	
 		return $this->db->update($this->table);
