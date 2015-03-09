@@ -19,11 +19,12 @@ class Home extends CI_Controller
 			$data = array();
 			$data['firstname'] = $this->session->userdata('firstname');
 			$data['lastname'] = $this->session->userdata('lastname');
+			$data['picture'] = $this->session->userdata('picture');
 			$data['allPosts'] = $this->post_model->getAllPosts();
 			$data['errors'] = $this->session->flashdata('errors');
 
 			$this->layout->setTitre('Welcome on Peterbook.');
-			$this->layout->views('headerLogin')
+			$this->layout->views('headerLogin', array('picture' => $this->session->userdata('picture')))
 						->view('home', $data);
 		}
 		else

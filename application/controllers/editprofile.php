@@ -36,7 +36,7 @@ class Editprofile extends CI_Controller
 			$data['picture'] =$variable[0]->picture;
 		
 		$this->layout->setTitre('Edit profile.');
-		$this->layout->views('headerLogin')
+		$this->layout->views('headerLogin', array('picture' => $this->session->userdata('picture')))
 					->view('editprofile',$data);
 		
 	}

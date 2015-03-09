@@ -11,7 +11,7 @@ class Subscription_model extends CI_Model
 			return false;
 		}
 		
-		return $this->db->set(array('email' => $email,'password' => $password,'firstname' => $firstname,'lastname' => $lastname))
+		return $this->db->set(array('email' => $email,'password' => $password,'firstname' => $firstname,'lastname' => $lastname, 'picture' => 'default.jpg'))
 			->insert($this->table);
 
 	}

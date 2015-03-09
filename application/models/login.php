@@ -11,7 +11,7 @@ class Login extends CI_Model
 			return false;
 		}
 		
-		return $this->db->select('email, firstname, lastname')
+		return $this->db->select('email, firstname, lastname, picture')
 						->from($this->table)
 						->where(array('email' => $email, 'password' => $password))
 						->get()
