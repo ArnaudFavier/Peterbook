@@ -28,45 +28,52 @@
 			<td class='bottom_post'>
 				<?php  
 					$message = $post->content;
-					
-					$smiley = array("O:)",">:O",":D","☺","o.O",":'(",":3","3:)",":(",">:(","<3","^_^",":*",":v",":)","-_-",":O",":P",":/",";)",":sick:",":work:",":boss:",":peter:");
-					$image = array(
-						"<img src=\"assets/img/smiley/angel.png\" alt=\"smiley\"/>",
-						"<img src=\"assets/img/smiley/angry.png\" alt=\"smiley\"/>",
-						"<img src=\"assets/img/smiley/bigsmile.png\" alt=\"smiley\"/>",
-						"<img src=\"assets/img/smiley/blush.png\" alt=\"smiley\"/>",
-						"<img src=\"assets/img/smiley/confused.png\" alt=\"smiley\"/>",
-						"<img src=\"assets/img/smiley/cry.png\" alt=\"smiley\"/>",
-						"<img src=\"assets/img/smiley/curlylips.png\" alt=\"smiley\"/>",
-						"<img src=\"assets/img/smiley/devil.png\" alt=\"smiley\"/>",
-						"<img src=\"assets/img/smiley/frown.png\" alt=\"smiley\"/>",
-						"<img src=\"assets/img/smiley/grumpy.png\" alt=\"smiley\"/>",
-						"<img src=\"assets/img/smiley/heart.png\" alt=\"smiley\"/>",
-						"<img src=\"assets/img/smiley/kiki.png\" alt=\"smiley\"/>",
-						"<img src=\"assets/img/smiley/kiss.png\" alt=\"smiley\"/>",
-						"<img src=\"assets/img/smiley/pacman.png\" alt=\"smiley\"/>",
-						"<img src=\"assets/img/smiley/smile.png\" alt=\"smiley\"/>",
-						"<img src=\"assets/img/smiley/squinting.png\" alt=\"smiley\"/>",
-						"<img src=\"assets/img/smiley/surprised.png\" alt=\"smiley\"/>",
-						"<img src=\"assets/img/smiley/tongue.png\" alt=\"smiley\"/>",
-						"<img src=\"assets/img/smiley/unsure.png\" alt=\"smiley\"/>",
-						"<img src=\"assets/img/smiley/wink.png\" alt=\"smiley\"/>",
-						"<img src=\"assets/img/smiley/lebrech.png\" alt=\"smiley\"/>",
-						"<img src=\"assets/img/smiley/work.png\" alt=\"smiley\"/>",
-						"<img src=\"assets/img/smiley/boss.jpg\" alt=\"smiley\"/>",
-						"<img src=\"assets/img/smiley/peter.png\" alt=\"smiley\"/>",
-					);
-					
-					$message = str_replace($smiley,$image,$message);
+
+					$message = add_smiley($message);
 					echo $message;
 				?>
 			</td>
 		</tr>
 		<tr>
 			<td>
-				<?php if(!empty($post->description)){echo "<hr>- " . $post->description;} ?>
+				<?php if(!empty($post->description)){echo "<hr>- " . add_smiley($post->description);} ?>
 			</td>
 		</tr>
 	</table>
 	<br />
 <?php } ?>
+
+<?php
+	function add_smiley($message)
+	{
+		$smiley = array("O:)",">:O",":D","☺","o.O",":'(",":3","3:)",":(",">:(","<3","^_^",":*",":v",":)","-_-",":O",":P",":/",";)",":sick:",":work:",":boss:",":peter:");
+		$image = array(
+			"<img src=\"assets/img/smiley/angel.png\" alt=\"smiley\"/>",
+			"<img src=\"assets/img/smiley/angry.png\" alt=\"smiley\"/>",
+			"<img src=\"assets/img/smiley/bigsmile.png\" alt=\"smiley\"/>",
+			"<img src=\"assets/img/smiley/blush.png\" alt=\"smiley\"/>",
+			"<img src=\"assets/img/smiley/confused.png\" alt=\"smiley\"/>",
+			"<img src=\"assets/img/smiley/cry.png\" alt=\"smiley\"/>",
+			"<img src=\"assets/img/smiley/curlylips.png\" alt=\"smiley\"/>",
+			"<img src=\"assets/img/smiley/devil.png\" alt=\"smiley\"/>",
+			"<img src=\"assets/img/smiley/frown.png\" alt=\"smiley\"/>",
+			"<img src=\"assets/img/smiley/grumpy.png\" alt=\"smiley\"/>",
+			"<img src=\"assets/img/smiley/heart.png\" alt=\"smiley\"/>",
+			"<img src=\"assets/img/smiley/kiki.png\" alt=\"smiley\"/>",
+			"<img src=\"assets/img/smiley/kiss.png\" alt=\"smiley\"/>",
+			"<img src=\"assets/img/smiley/pacman.png\" alt=\"smiley\"/>",
+			"<img src=\"assets/img/smiley/smile.png\" alt=\"smiley\"/>",
+			"<img src=\"assets/img/smiley/squinting.png\" alt=\"smiley\"/>",
+			"<img src=\"assets/img/smiley/surprised.png\" alt=\"smiley\"/>",
+			"<img src=\"assets/img/smiley/tongue.png\" alt=\"smiley\"/>",
+			"<img src=\"assets/img/smiley/unsure.png\" alt=\"smiley\"/>",
+			"<img src=\"assets/img/smiley/wink.png\" alt=\"smiley\"/>",
+			"<img src=\"assets/img/smiley/lebrech.png\" alt=\"smiley\"/>",
+			"<img src=\"assets/img/smiley/work.png\" alt=\"smiley\"/>",
+			"<img src=\"assets/img/smiley/boss.jpg\" alt=\"smiley\"/>",
+			"<img src=\"assets/img/smiley/peter.png\" alt=\"smiley\"/>",
+		);
+		
+		return str_replace($smiley,$image,$message);
+	}
+?>
