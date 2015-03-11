@@ -1,6 +1,6 @@
 <div class="titlebar_background">
 	<div class="in_titlebar">
-		<img src="assets/img/upload/<?php echo $picture; ?>" height="50" width="50">
+		<img class='picturetop' src="assets/img/upload/<?php echo $picture; ?>" height="50" width="50">
 		<img class="logo" src="assets/img/logo_without_background.png" alt="logo" height="110" width="250"/>	
 		<form class="logout" method="post" action="Logout">
 			<table>
