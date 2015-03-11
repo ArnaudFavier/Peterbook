@@ -29,7 +29,7 @@
 				<?php  
 					$message = $post->content;
 					
-					$smiley = array("O:)",">:O",":D","☺","o.O",":'(",":3","3:)",":(",">:(","<3","^_^",":*",":v",":)","-_-",":O",":P",":/",";)",":sick:",":work:",":boss:");
+					$smiley = array("O:)",">:O",":D","☺","o.O",":'(",":3","3:)",":(",">:(","<3","^_^",":*",":v",":)","-_-",":O",":P",":/",";)",":sick:",":work:",":boss:",":peter:");
 					$image = array(
 						"<img src=\"assets/img/smiley/angel.png\" alt=\"smiley\"/>",
 						"<img src=\"assets/img/smiley/angry.png\" alt=\"smiley\"/>",
@@ -54,6 +54,7 @@
 						"<img src=\"assets/img/smiley/lebrech.png\" alt=\"smiley\"/>",
 						"<img src=\"assets/img/smiley/work.png\" alt=\"smiley\"/>",
 						"<img src=\"assets/img/smiley/boss.jpg\" alt=\"smiley\"/>",
+						"<img src=\"assets/img/smiley/peter.png\" alt=\"smiley\"/>",
 					);
 					
 					$message = str_replace($smiley,$image,$message);
