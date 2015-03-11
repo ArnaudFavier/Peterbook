@@ -316,6 +316,7 @@ td.bottom_post
 	
 	border-bottom-left-radius: 10px;
 	border-bottom-right-radius: 10px;
+	font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
 }
 
 #footer
@@ -373,4 +374,5 @@ td.humor
 .leftpadding
 {
 	padding-left:20px;
+	font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
 }
