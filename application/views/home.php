@@ -2,8 +2,10 @@
 <table class='post'>
 	<tr>
 		<td class='top_post'>
-			<?php echo '<img src="assets/img/upload/' . $picture . '" height="50" width="50">'; ?>
-			<h2>What's new, <?php echo $firstname . " " . $lastname; ?>?</h2>
+			<table><tr>
+			<td><?php echo '<img class=\'picture_little\' src="assets/img/upload/' . $picture . '" height="50" width="50">'; ?></td>
+			<td><h2 class='leftpadding'>What's new, <?php echo $firstname . " " . $lastname; ?>?</h2></td>
+			</tr></table>
 		</td>
 	</tr>
 	<tr >
@@ -20,8 +22,12 @@
 	<table class='post'>
 		<tr>
 			<td class='top_post'>
-				<?php echo '<img src="assets/img/upload/' . $post->picture . '" height="50" width="50">'; ?>
-				<?php echo $post->firstname . ' ' . $post->lastname . " said: (" . date("j F Y H:i",$post->date) . ")"; ?>
+				<table>
+					<tr>
+						<td><?php echo '<img class=\'picture_little\' src="assets/img/upload/' . $post->picture . '" height="50" width="50">'; ?></td>					
+						<td class='leftpadding'><?php echo $post->firstname . ' ' . $post->lastname . " said: (" . date("j F Y H:i",$post->date) . ")"; ?></td>
+					</tr>
+				</table>
 			</td>
 		</tr>
 		<tr >

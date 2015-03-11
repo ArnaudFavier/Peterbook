@@ -202,6 +202,18 @@ img.picture
 	border-color: #BDC7D8;
 }
 
+img.picture_little
+{
+	padding: 2px;
+	background: #ffffff;
+	height: 50px;
+	width: 50px;
+	
+	border-radius: 3px;
+	border:1px solid black;
+	border-color: #BDC7D8;
+}
+
 div.center_div
 {
 	display: table;
@@ -340,4 +352,9 @@ td.humor
 	font-size: 16px;
 	font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
 	color: red;
+}
+
+.leftpadding
+{
+	padding-left:20px;
 }
