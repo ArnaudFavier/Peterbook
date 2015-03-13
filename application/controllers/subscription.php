@@ -11,6 +11,7 @@ class Subscription extends CI_Controller
 		
 		$this->load->database();
 		$this->load->model('subscription_model');
+		$this->load->model('login');
 
 		$this->load->library('form_validation');
 
@@ -25,13 +26,25 @@ class Subscription extends CI_Controller
 		if($this->form_validation->run() && $this->input->post('email') == $this->input->post('email2'))
 		{
 			$return = $this->subscription_model->createUser($this->input->post('email'),
-												$this->input->post('password'),
-												$this->input->post('firstname'),
-												$this->input->post('lastname'));
-												
-			$this->session->set_userdata('email', $return[0]->email);
-			$this->session->set_userdata('firstname', $return[0]->firstname);
-			$this->session->set_userdata('lastname', $return[0]->lastname);
+				$this->input->post('password'),
+				$this->input->post('firstname'),
+				$this->input->post('lastname'));
+
+			$connected = $this->login->connectUser($this->input->post('email'),
+				$this->input->post('password'));
+
+			if(!empty($connected))
+			{
+				$this->session->set_userdata('email', $connected[0]->email);
+				$this->session->set_userdata('firstname', $connected[0]->firstname);
+				$this->session->set_userdata('lastname', $connected[0]->lastname);
+				$this->session->set_userdata('picture', $connected[0]->picture);
+			}
+
+			if(!empty($this->session->userdata('email')))
+			{
+				redirect('/home/');
+			}
 		}
 		else
 		{

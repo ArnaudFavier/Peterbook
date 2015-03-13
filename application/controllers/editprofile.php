@@ -16,7 +16,7 @@ class Editprofile extends CI_Controller
 		$config = array(
 			'upload_path' => "./assets/img/upload/",
 			'file_name' => $this->session->userdata('email').".png",
-			'allowed_types' => "jpg|png|jpeg",
+			'allowed_types' => "gif|jpg|png|jpeg",
 			'overwrite' => TRUE,
 			'max_size' => "2048000",
 			'max_height' => "768",
