@@ -17,20 +17,33 @@ class Profile_Model extends CI_Model
 				->result();
 	}
 	
-	public function editUserProfile($email, $newpic, $newdesc){
+	public function editUserProfile($email, $newDescription, $newPicture){
 		
 		if(!is_string($email) OR empty($email))
 		{
 			return false;
 		}
-		if($newpic != "")
-		$this->db->set('picture', $newpic);
-		if($newdesc != "")
-		$this->db->set('description', $newdesc);
+
+		$data = array();
+
+		if(!empty($newDescription))
+		{
+			$data['description'] = $newDescription;
+		}
+		else
+		{
+			if(!empty($newPicture))
+			{
+				$data['picture'] = $newPicture;
+			}
+			else
+			{
+				return false;
+			}
+		}
+
 		$this->db->where('email', $email);
 	
-		return $this->db->update($this->table);
-		
-		
+		return $this->db->update($this->table, $data);
 	}
 }
