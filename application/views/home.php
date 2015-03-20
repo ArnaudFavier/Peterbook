@@ -75,9 +75,7 @@
 			"<img src=\"assets/img/smiley/unsure.png\" alt=\"smiley\"/>",
 			"<img src=\"assets/img/smiley/wink.png\" alt=\"smiley\"/>",
 			"<img src=\"assets/img/smiley/lebrech.png\" alt=\"smiley\"/>",
-			"<img src=\"assets/img/smiley/work.png\" alt=\"smiley\"/>",
 			"<img src=\"assets/img/smiley/boss.jpg\" alt=\"smiley\"/>",
-			"<img src=\"assets/img/smiley/peter.png\" alt=\"smiley\"/>",
 		);
 		
 		return str_replace($smiley,$image,$message);
